@@ -1,0 +1,11 @@
+services:
+  
+type: web
+  name: vite-app
+  env: node
+  buildCommand: npm run build
+  startCommand: npx serve dist
+  staticAssets:
+    rewrites:
+source: /(.*) # match any path
+      destination: /index.html # serve index.html
